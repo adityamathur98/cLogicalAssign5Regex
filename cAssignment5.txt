@@ -1,0 +1,60 @@
+Q1. 1. Write a C program to check whether a number is prime or not. Example:
+● Input: 5, Output: Prime
+● Input: 18, Output: Not Prime
+● Input: 29, Output: Prime
+
+Ans. #include <stdio.h>
+
+int main()
+{
+    int primeNum;
+    printf("Enter Any Prime Number: ");
+    scanf("%d", &primeNum);
+    int count;
+    int checkingNum = 2;
+    while(checkingNum < primeNum){
+        
+        if(primeNum%checkingNum == 0){
+            count++;
+            break;
+        }
+        checkingNum++;
+    }
+    
+    if(count > 0){
+        printf("Not Prime Number");
+    } else{
+        printf("Prime Number");
+    }
+    
+
+    return 0;
+}
+
+Q2. Write a C program to print all prime numbers up to n. Example:
+● Input: n = 10, Output: 2 3 5 7
+● Input: n = 20, Output: 2 3 5 7 11 13 17 19
+
+Ans. #include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Please Enter Any Integer Number: ");
+    scanf("%d", &num);
+    int i = 2;
+    while(i<= num){
+        int factors = 0;
+        int j = 2;
+        while(j < i){
+            if (i%j == 0){
+                factors++;
+            }
+            j++;
+        }
+        if (factors == 0){
+            printf("%d\n", i);
+        }
+        i++;
+    }
+}
