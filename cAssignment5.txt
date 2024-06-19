@@ -58,3 +58,30 @@ int main()
         i++;
     }
 }
+
+//Code to Print Range of Prime Number between two Integer Number 
+Ans. #include <stdio.h>
+
+int main()
+{
+    int num1,num2;
+    printf("Please Enter Any Start Range Integer Number: ");
+    scanf("%d", &num1);
+    printf("Please Enter Any End Range Integer Number: ");
+    scanf("%d", &num2);
+    int i = num1;
+    while(i<= num2){
+        int factors = 0;
+        int j = 2;
+        while(j < i){
+            if (i%j == 0){
+                factors++;
+            }
+            j++;
+        }
+        if (factors == 0){
+            printf("%d\n", i);
+        }
+        i++;
+    }
+}
